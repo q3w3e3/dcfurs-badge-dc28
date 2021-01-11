@@ -77,7 +77,7 @@ extern struct framebuf out0170_png;
 extern struct framebuf out0171_png;
 extern struct framebuf out0172_png;
 
-int timeout = 10000;
+int timeout = 100000;
 
 void main(void){
 	while (1){
