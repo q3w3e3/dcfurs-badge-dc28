@@ -13,8 +13,8 @@ srcdir = os.path.dirname(os.path.abspath(__file__))
 ldsfile = os.path.join(srcdir,'animation.lds')
 
 # The list of animations to build.
-animations = ['DOOM',
-	      'marquee-image',
+animations = ['blender',
+	          'marquee-image',
               'lineface',
               'djmode',
               'mic-test',
