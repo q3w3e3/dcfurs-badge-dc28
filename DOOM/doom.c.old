@@ -1,0 +1,20 @@
+#include <stdint.h>
+#include <string.h>
+#include <stdio.h>
+#include <unistd.h>
+#include "badge.h"
+
+extern struct framebuf out1_png;
+extern struct framebuf out2_png;
+extern struct framebuf out3_png;
+
+
+
+void main(void){
+	while (1){
+		framebuf_render(&out1_png);	usleep(83333);
+		framebuf_free(&out1_png);
+		framebuf_render(&out2_png);	usleep(83333);
+		framebuf_render(&out3_png);	usleep(83333);
+	}
+}

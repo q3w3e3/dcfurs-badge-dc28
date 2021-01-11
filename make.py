@@ -13,7 +13,8 @@ srcdir = os.path.dirname(os.path.abspath(__file__))
 ldsfile = os.path.join(srcdir,'animation.lds')
 
 # The list of animations to build.
-animations = ['marquee-image',
+animations = ['DOOM',
+	      'marquee-image',
               'lineface',
               'djmode',
               'mic-test',
@@ -507,7 +508,7 @@ def main():
                 target='animations.bin')
 
         elif command == 'upload':
-            if subprocess.call(['dfu-util', '-d', '1d50:6130', '-a1', '-D', 'animations.bin', '-R'], stderr=subprocess.STDOUT) != 0:
+            if subprocess.call(['sudo', 'dfu-util', '-d', '26f3:1338', '-a1', '-D', 'animations.bin', '-R'], stderr=subprocess.STDOUT) != 0:
                 return
         
         elif command == 'clean':
